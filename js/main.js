@@ -26,7 +26,8 @@ const products = [
         origin: 'Cafeología Natural',
         prices: { '1/4': 350, '1/2': 700, '1kg': 1400 },
         image: 'images/cafe_normal.jpeg',
-        category: 'coffee'
+        category: 'coffee',
+        description: 'Café de especialidad con proceso natural. Taza dulce y afrutada, cuerpo sedoso y notas que recuerdan a frutos rojos y cacao suave.'
     },
     {
         id: 2,
@@ -34,7 +35,8 @@ const products = [
         origin: 'Lavado',
         prices: { '1/4': 120, '1/2': 240, '1kg': 480 },
         image: 'images/cafe_normal.jpeg',
-        category: 'coffee'
+        category: 'coffee',
+        description: 'Café de especialidad de taza limpia y equilibrada. Perfil brillante con notas cítricas suaves y acidez fresca típica del proceso lavado.'
     },
     {
         id: 3,
@@ -42,10 +44,10 @@ const products = [
         origin: 'Lavado',
         prices: { '1/4': 120, '1/2': 240, '1kg': 480 },
         image: 'images/cafe_cafeologia.jpeg',
-        category: 'coffee'
+        category: 'coffee',
+        description: 'Café de especialidad con sabor redondo y dulce. Presenta notas florales, caramelo ligero y un cuerpo equilibrado.'
     }
 ];
-
 // ============================================
 // DATOS DEL MENÚ
 // ============================================
@@ -54,31 +56,30 @@ const products = [
 // ============================================
 const menuItems = {
     frappes: [
-        { id: 101, name: 'Frapuccino', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-cajeta.jpg' },
-        { id: 102, name: 'Cajeta', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-cajeta.jpg' },
-        { id: 103, name: 'Oreo', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-oreo.jpg' },
-        { id: 104, name: 'Moca', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-moca.jpg' }
+        { id: 101, name: 'Frapuccino', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-cajeta.jpg', description: 'Frappe cremoso con base de café, sabor clásico y refrescante.' },
+        { id: 102, name: 'Cajeta', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-cajeta.jpg', description: 'Frappe dulce y cremoso con sabor tradicional a cajeta.' },
+        { id: 103, name: 'Oreo', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-oreo.jpg', description: 'Frappe con galleta Oreo, textura espesa y sabor chocolateado.' },
+        { id: 104, name: 'Moca', price: 75, category: 'drinks', type: 'frappe', image: 'images/frappe-moca.jpg', description: 'Frappe de café y chocolate con textura cremosa y sabor intenso.' }
     ],
     hotCoffee: [
-        { id: 201, name: 'Espresso', prices: { 'Chico': 45, 'Grande': 48 }, category: 'drinks', type: 'hot-coffee', image: 'images/espresso.jpg' },
-        { id: 202, name: 'Latte', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/capuchino.jpg' },
-        { id: 203, name: 'Espresso cortado', price: 48, category: 'drinks', type: 'hot-coffee', image: 'images/espresso-cortado.jpg' },
-        { id: 204, name: 'Capuchino', price: 65, category: 'drinks', type: 'hot-coffee', image: 'images/capuchino.jpg' },
-        { id: 205, name: 'Americano', price: 48, category: 'drinks', type: 'hot-coffee', image: 'images/americano.jpg' },
-        { id: 206, name: 'Moca', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/moca.jpg' },
-        { id: 207, name: 'Latte caramelo', price: 72, category: 'drinks', type: 'hot-coffee', image: 'images/latte-caramelo.jpg' },
-        { id: 208, name: 'Choco-latte', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/choco-latte.jpg' },
-        { id: 209, name: 'Chocolatada', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/chocolatada.jpg' }
+        { id: 201, name: 'Espresso', prices: { 'Chico': 45, 'Grande': 48 }, category: 'drinks', type: 'hot-coffee', image: 'images/espresso.jpg', description: 'Bebida pequeña e intensa a base de café, con sabor concentrado y cuerpo robusto.' },
+        { id: 202, name: 'Latte', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/capuchino.jpg', description: 'Bebida cremosa a base de espresso con predominancia de leche, sabor suave y balanceado.' },
+        { id: 203, name: 'Espresso cortado', price: 48, category: 'drinks', type: 'hot-coffee', image: 'images/espresso-cortado.jpg', description: 'Espresso con un toque de leche texturizada que suaviza su intensidad.' },
+        { id: 204, name: 'Capuchino', price: 65, category: 'drinks', type: 'hot-coffee', image: 'images/capuchino.jpg', description: 'Mezcla equilibrada de espresso y leche texturizada con un sabor intenso a café.' },
+        { id: 205, name: 'Americano', price: 48, category: 'drinks', type: 'hot-coffee', image: 'images/americano.jpg', description: 'Espresso rebajado con agua caliente, sabor más suave pero con carácter.' },
+        { id: 206, name: 'Moca', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/moca.jpg', description: 'Bebida dulce y cremosa preparada con espresso y chocolate de la casa.' },
+        { id: 207, name: 'Latte caramelo', price: 72, category: 'drinks', type: 'hot-coffee', image: 'images/latte-caramelo.jpg', description: 'Latte con un toque de cajeta que aporta dulzor y aroma suave.' },
+        { id: 208, name: 'Choco-latte', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/choco-latte.jpg', description: 'Chocolate al 70% combinado con leche texturizada, sabor profundo y cremoso.' },
+        { id: 209, name: 'Chocolatada', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'hot-coffee', image: 'images/chocolatada.jpg', description: 'Bebida de chocolate al 70% preparada con agua caliente.' }
     ],
     teas: [
-        { id: 301, name: 'Té Negro (Earl Grey)', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-negro.jpg' },
-        { id: 302, name: 'Té Negro Chai', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-chai.jpg' },
-        { id: 303, name: 'Té Verde Flamingo Limonada', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-verde.jpg' },
-        { id: 304, name: 'Matcha', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/matcha.jpg' },
-        { id: 305, name: 'Variedad de Tisanas', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/tisanas.jpg' }
+        { id: 301, name: 'Té Negro (Earl Grey)', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-negro.jpg', description: 'Té negro aromatizado con bergamota, perfil elegante y ligeramente cítrico.' },
+        { id: 302, name: 'Té Negro Chai', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-chai.jpg', description: 'Té negro mezclado con especias cálidas; sabor aromático e intenso.' },
+        { id: 303, name: 'Té Verde Flamingo Limonada', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/te-verde.jpg', description: 'Té verde suave con mezcla de flores, perfil fresco y ligero.' },
+        { id: 304, name: 'Matcha', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/matcha.jpg', description: 'Té verde japonés en polvo, sabor vegetal intenso y textura cremosa.' },
+        { id: 305, name: 'Variedad de Tisanas', prices: { 'Chico': 68, 'Grande': 72 }, category: 'drinks', type: 'tea', image: 'images/tisanas.jpg', description: 'Infusiones herbales o frutales sin cafeína con aromas frescos y naturales.' }
     ]
 };
-
 // ============================================
 // ESTADO GLOBAL
 // ============================================
@@ -799,6 +800,7 @@ function createProductCard(product) {
             <div class="product-info">
                 <div class="product-name">${product.name}</div>
                 <div class="product-origin">${product.origin}</div>
+                ${product.description ? `<p style="font-size: 0.85rem; color: #666; margin: 0.5rem 0; line-height: 1.4;">${product.description}</p>` : ''}
                 <div class="product-price" id="price-${product.id}">$${currentPrice}.00 MXN</div>
                 <div class="product-weight">
                     ${Object.keys(product.prices).map(weight => `
@@ -840,6 +842,7 @@ function createMenuItem(item) {
                     <div class="menu-item-name">${item.name}</div>
                     <div class="menu-item-price" id="menu-price-${item.id}">$${currentPrice}.00</div>
                 </div>
+                ${item.description ? `<p style="font-size: 0.85rem; color: #666; margin: 0.5rem 0 1rem 0; line-height: 1.4;">${item.description}</p>` : ''}
                 ${hasMultipleSizes ? `
                     <div class="menu-item-sizes">
                         ${Object.keys(item.prices).map(size => `
